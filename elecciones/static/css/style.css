@@ -1,0 +1,144 @@
+
+:root {
+    --blue: #0052cc;
+    --red: #dc3545;
+    --yellow: #ffc107;
+}
+
+body {
+    background-color: #f8f9fa;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+}
+
+.card-header {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.candidate-card {
+    transition: transform 0.2s;
+}
+
+.candidate-card:hover {
+    transform: translateY(-5px);
+}
+
+.candidate-card img {
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.vote-percentage {
+    margin-top: 1rem;
+}
+
+.vote-percentage h3 {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.progress {
+    height: 8px;
+    border-radius: 4px;
+}
+
+.bg-blue {
+    background-color: var(--blue);
+}
+
+.bg-red {
+    background-color: var(--red);
+}
+
+.bg-yellow {
+    background-color: var(--yellow);
+}
+
+.stats-box {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.stats-box h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+#live-indicator {
+    padding: 0.5rem 1rem;
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.table th {
+    font-weight: 600;
+    border-top: none;
+}
+
+.footer {
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .candidate-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.custom-radio {
+    margin-bottom: 1rem;
+}
+
+.form-check-input:checked {
+    background-color: var(--blue);
+    border-color: var(--blue);
+}
+
+#voteMessage {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: none;
+}
+
+#voteMessage.success {
+    display: block;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+#voteMessage.error {
+    display: block;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+#votingSection {
+    transition: all 0.3s ease;
+}
+
+#votingSection.voted {
+    opacity: 0.7;
+    pointer-events: none;
+}
